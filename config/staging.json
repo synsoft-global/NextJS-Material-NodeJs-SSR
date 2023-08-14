@@ -1,0 +1,6 @@
+{
+  "basePath": "",
+  "baseUrl": "http://redesign.synsoftglobal.net:4002",
+  "apiBaseUrl": "https://api.synsoftglobal.com/wp-json",
+  "apiRevalidateTime": 86400
+}

@@ -1,0 +1,46 @@
+{
+  "name": "synsoft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NEXT_PUBLIC_APP_ENV=development node utils/generateConfig.js && cross-env NEXT_PUBLIC_APP_ENV=development NODE_OPTIONS='--inspect' next dev -p 3001",
+    "dev:qa": "cross-env NEXT_PUBLIC_APP_ENV=staging node utils/generateConfig.js && cross-env NEXT_PUBLIC_APP_ENV=staging NODE_OPTIONS='--inspect' next dev -p 3002",
+    "dev:prod": "cross-env NEXT_PUBLIC_APP_ENV=production node utils/generateConfig.js && cross-env NEXT_PUBLIC_APP_ENV=production NODE_OPTIONS='--inspect' next dev -p 3003",
+    "build:dev": "cross-env NEXT_PUBLIC_APP_ENV=development node utils/generateConfig.js && next build",
+    "build:qa": "cross-env NEXT_PUBLIC_APP_ENV=staging node utils/generateConfig.js && next build",
+    "build:prod": "cross-env NEXT_PUBLIC_APP_ENV=production node utils/generateConfig.js && next build",
+    "deploy:dev": "pm2 startOrRestart ecosystem.config.js --env development",
+    "deploy:stag": "pm2 startOrRestart ecosystem.config.js --env staging",
+    "deploy:prod": "pm2 startOrRestart ecosystem.config.js --env production",
+    "start:dev": "next start -p 3001",
+    "start:qa": "next start -p 4002",
+    "start": "next start -p 1339",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/lab": "^5.0.0-alpha.129",
+    "@mui/material": "^5.13.5",
+    "axios": "^1.3.4",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "highlight.js": "^10.7.3",
+    "html-react-parser": "^3.0.15",
+    "js-cookie": "^3.0.5",
+    "next": "^13.4.6",
+    "nprogress": "^0.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-google-invisible-recaptcha": "^1.0.0-rc.2",
+    "react-hook-form": "^7.43.9",
+    "react-image-lightbox": "^5.1.4",
+    "sharp": "^0.32.1",
+    "simplebar-react": "^3.2.4",
+    "swiper": "^9.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

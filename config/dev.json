@@ -1,0 +1,6 @@
+{
+  "basePath": "",
+  "baseUrl": "http://localhost:3001",
+  "apiBaseUrl": "https://api.synsoftglobal.com/wp-json",
+  "apiRevalidateTime": 86400
+}
